@@ -5,8 +5,163 @@
     <title>HTML Academy: Барбершоп</title>
   </head>
   <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <nav class="main-navigation">
+          <img class="main-navigation__logo" src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа «Бородинский»">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item"><a class="main-navigation__link" href="info.html">Информация</a></li>
+            <li class="main-navigation__item"><a class="main-navigation__link" href="news.html">Новости</a></li>
+            <li class="main-navigation__item"><a class="main-navigation__link" href="price.html">Прайс-лист</a></li>
+            <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">Магазин</a></li>
+            <li class="main-navigation__item"><a class="main-navigation__link" href="contacts.html">Контакты</a></li>
+          </ul>
+          <button class="header__login-button">Вход</button>
+        </nav>
+      </div>
+    </header>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+    <main class="main">
+      <div class="main__wrapper">
+        <h1 class="main__header">Барбершоп "Бородинский"</h1>
+        <section class="features">
+          <h2 class="features__header headers">Наши преимущества</h2>
+          <ul class="features__list">
+            <li class="features__item">
+              <h3 class="features__feature headers">Быстро</h3>
+              <p class="features__text">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки!</p>
+            </li>
+            <li class="features__item">
+              <h3 class="features__feature headers">Круто</h3>
+              <p class="features__text">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
+            </li>
+            <li class="features__item">
+              <h3 class="features__feature headers">Дорого</h3>
+              <p class="features__text">Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус?</p>
+            </li>
+          </ul>
+        </section>
+        <div class="main__container">
+          <section class="news">
+            <h2 class="news__header headers">Новости</h2>
+            <ul class="news__list">
+              <li class="news__item">
+                <p class="news__text">Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
+                <time class="news__time" datetime="2016-01-11">11 января</time>
+              </li>
+              <li class="news__item">
+                <p class="news__text">В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды</p>
+                <time class="news__time" datetime="2016-01-18">18 января</time>
+              </li>
+            </ul>
+            <a class="button" href="news.html">Все новости</a>
+          </section>
+          <section class="gallery">
+            <h2 class="gallery__header headers">Фотогалереия</h2>
+            <figure class="gallery-content">
+              <a class="gallery__link" href="#"><img class="gallery__image" src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
+            </figure>
+            <button class="gallery__button gallery__button--leftt button">Назад</button>
+            <button class="gallery__button gallery__button--right button">Вперед</button>
+          </section>
+        </div>
+        <div class="main__container">
+          <section class="contacts vcard">
+            <h2 class="contacts__header headers">Контактная информация</h2>
+            <address class="contacts__info">
+              <p class="contacts__text"><span class="contacts__category category">Барбершоп</span><span class="contacts__name fn org">"Бородинский"</span></p>
+              <p class="contacts__text adr">Адрес: <span class="contacts__locality locality">г. Санкт-Петербург</span>, <span class="contacts__street street-address">б. Конюшенная, д. 19/8</span></p>
+              <p class="contacts__text">Телефон: <a class="contacts__phone tel" href="tel:+74956660266">+7(495)666-02-66</a></p>
+            </address>
+            <div class="contacts__work-time">
+              <p class="contacts__text">Время работы</p>
+              <p class="contacts__text workhours">ПН-ПТ: с 10:00 до 22:00</p>
+              <p class="contacts__text workhours">CБ-ВС: с 10:00 до 22:00</p>
+            </div>
+            <p class="contacts__url url"><span class="value-title" title="http://www.barbershop.ru"></span></p>
+            <button class="contacts__link button" type="button">Как проехать</button>
+            <a class="contacts__link button" href="contacts.html">Обратная связь</a>
+          </section>
+          <section class="appointment">
+            <h2 class="appointment__header headers">Записаться</h2>
+            <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+            <form class="appointment__form" action="https://echo.htmlacademy.ru" method="post">
+              <p class="appointment__item">
+                <label class="appointment__label" for="appointment_input_date">Дата</label>
+                <input class="appointment__input" id="appointment_input_date" type="text" name="date" value="" placeholder="08.10.2017">
+              </p>
+              <p class="appointment__item">
+                <label class="appointment__label" for="appointment_input_time">Время</label>
+                <input class="appointment__input" id="appointment_input_time" type="text" name="time" value="" placeholder="10:00">
+              </p>
+              <p class="appointment__item">
+                <label class="appointment__label" for="appointment_input_name">Ваше имя</label>
+                <input class="appointment__input" id="appointment_input_name" type="text" name="name" value="" placeholder="Борода">
+              </p>
+              <p class="appointment__item">
+                <label class="appointment__label" for="appointment_input_phone">Телефон</label>
+                <input class="appointment__input" id="appointment_input_phone" type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+              </p>
+              <button class="appointment__button button" type="submit">Отправить</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <section class="contacts-footer">
+          <h2 class="contacts-footer__header  headers">Контактная информация</h2>
+          <p class="contacts-footer__text">Барбершоп «Бородинский»</p>
+          <p class="contacts-footer__text">Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8</p>
+          <p class="contacts-footer__text"><a class="contacts-footer__link" href="map.html">Как нас найти?</a></p>
+          <p class="contacts-footer__text">Телефон: +7 (812) 666-02-66</p>
+        </section>
+        <section class="social">
+          <h2 class="social__header headers">Мы в социальных сетях</h2>
+          <p class="social__text">Давайте дружить!</p>
+          <ul class="social__list">
+            <li class="social__item"><a class="social__link" href="#">Вконтакте</a></li>
+            <li class="social__item"><a class="social__link" href="#">Фейсбук</a></li>
+            <li class="social__item"><a class="social__link" href="#">Инстаграм</a></li>
+          </ul>
+        </section>
+        <section class="developer">
+          <h2 class="developer__header headers">Разработано</h2>
+          <a class="developer__link button" href="https://htmlacademy.ru">HTML Academy</a>
+        </section>
+      </div>
+    </footer>
+
+    <section class="login modal">
+      <h2 class="login__header">Личный кабинет</h2>
+      <p class="login__text">Введите свой логин и пароль.</p>
+      <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="login__block">
+          <label class="login__label" for="login_input_login"></label>
+          <input class="login__input" id="login_input_login" type="text" name="login">
+        </p>
+        <p class="login__block">
+          <label class="login__label" for="login_input_password"></label>
+          <input class="login__input" id="login_input_password" type="password" name="password">
+        </p>
+        <p class="login__block">
+          <label class="login__label">
+            Запомните меня
+            <input class="login__checkbox checkbox" id="login_checkbox_remember" type="checkbox" name="remember">
+            <span class="login__checkbox-display"></span>
+          </label>
+          <a class="login__restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="login__button button" type="submit">Войти</button>
+      </form>
+      <span class="modal__close"></span>
+    </section>
+
+    <section class="map modal">
+      <h2 class="map__header">Как до нас добраться</h2>
+      <span class="modal__close"></span>
+    </section>
   </body>
 </html>
